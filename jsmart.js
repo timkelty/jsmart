@@ -1810,6 +1810,10 @@
 
     function getTemplate(name, tree, nocache)
     {
+        // Forcing nocache for now
+        // https://github.com/umakantp/jsmart/issues/12
+        nocache = true;
+
         if (nocache || !(name in files))
         {
             var tpl = jSmart.prototype.getTemplate(name);
